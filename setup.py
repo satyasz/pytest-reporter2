@@ -39,7 +39,7 @@ setup(
     ],
     entry_points={
         'pytest11': [
-            'reporter = pytest_reporter.plugin',
+            'reporter = pytest_reporter2.plugin',
         ],
     },
 )
