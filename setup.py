@@ -1,30 +1,23 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+from setuptools import setup
 
-import os
-import codecs
-from setuptools import setup, find_packages
-
-
-def read(fname):
-    file_path = os.path.join(os.path.dirname(__file__), fname)
-    return codecs.open(file_path, encoding='utf-8').read()
-
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
 setup(
     name='pytest-reporter2',
-    use_scm_version=True,
+    version='0.0.3',
     author='Satya S',
     author_email='satyasz100@gmail.com',
     maintainer='Satya S',
     maintainer_email='satyasz100@gmail.com',
     license='MIT',
+    license_file='LICENSE',
     url='https://github.com/satyasz/pytest-reporter2',
-    description='Generate Pytest reports with templates',
-    long_description=read('README.rst'),
-    packages=find_packages(),
+    description='Generate Pytest reports with templates (modified)',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
+    packages=['pytest_reporter2'],
     python_requires='>=3.5',
-    setup_requires=['setuptools_scm'],
     install_requires=[
         'pytest',
     ],
